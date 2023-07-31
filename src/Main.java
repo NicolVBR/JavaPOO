@@ -10,7 +10,7 @@ public class Main {
 
        //Doctor myDoctor = new Doctor();
         Doctor myDoctor = new Doctor("Nicol Barajas","Cirujana");
-        System.out.println("\nID: " + Doctor.getId()+
+        System.out.println("\nID: " + myDoctor.getId()+
                 "\nName: " + myDoctor.getName() +
                 "\nEspecialidad: " + myDoctor.getSpeciallity());
 
