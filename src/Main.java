@@ -46,7 +46,6 @@ public class Main {
         //Memoria de objetos
         Patient myPatient = new Patient("Ramiro","Ramiro@mail.com");
         Patient myPatient2 = new Patient("Andres","Andres@mail.com");
-        myPatient.
         System.out.println(myPatient.getName());
         System.out.println(myPatient2.getName());
         // Igualando la direccion de memoria
