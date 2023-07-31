@@ -1,9 +1,8 @@
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor {
-    private static int id = 0;
-    private String  name, speciallity, email;
+public class Doctor extends User{
+    private String  speciallity;
     //private String time;
     //private Date date;
     //private int idAvilabelApointment;
@@ -13,37 +12,24 @@ public class Doctor {
 
   //Comportamientos
     Doctor(){
-        System.out.println("Construcción del objeto doctor");
+        super();
+        //System.out.println("Construcción del objeto doctor");
         //id ++;
     }
-    Doctor(String name, String speciallity){
+    Doctor(String name, String email){
+        super(name,email);
         //System.out.println("El nombre del doctor asignado es: " + name);
-        this.name = name;
+        /*this.name = name;
         this.speciallity = speciallity;
-        id ++;
+        id ++;*/
     }
     public  void showName(){//Imprime el nombre del doctor
-        System.out.println(name);
+        System.out.println(""+ getName());
     }
     public  void showid(){
-        System.out.println("Id doctor: "+ id);
+        System.out.println("Id doctor: "+ getId());
     }
 
-    public static int getId() {
-        return id;
-    }
-
-    public static void setId(int id) {
-        Doctor.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getSpeciallity() {
         return speciallity;
@@ -51,14 +37,6 @@ public class Doctor {
 
     public void setSpeciallity(String speciallity) {
         this.speciallity = speciallity;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
 

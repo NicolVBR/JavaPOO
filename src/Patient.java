@@ -1,16 +1,12 @@
-public class Patient {
-    int id;
-    private String name,email, address, phoneNumber, birthday, blood;
+public class Patient extends User{
+    private String birthday, blood;
     private double weight, height;
 
-    public Patient() {
+    public Patient(){
+        super();
     }
-
     public Patient(String name, String email) {
-        this.name = name;
-        this.email = email;
-       // this.weight = 57.9;
-       // System.out.println(weight + " Kg.");
+        super(name,email);
     }
 
     public String getWeight() {
@@ -29,51 +25,6 @@ public class Patient {
         this.height = height;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        if(phoneNumber.length() == 8){
-            this.phoneNumber = phoneNumber;
-
-        }else{
-            System.out.println("ERROR: El nÚmero telefonico debe ser de 8 digitos.");
-        }
-
-    }
 
     public String getBirthday() {
         return birthday;

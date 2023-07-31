@@ -1,6 +1,10 @@
 public class User {
-    int id;
+    private int id;
     private String name,email, address, phoneNumber;
+
+    public User() {
+
+    }
 
     public User(String name, String email) {
         this.name = name;
@@ -44,6 +48,11 @@ public class User {
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+        if(phoneNumber.length() == 8){
+            this.phoneNumber = phoneNumber;
+
+        }else{
+            System.out.println("ERROR: El nÚmero telefonico debe ser de 8 digitos.");
+        }
     }
 }

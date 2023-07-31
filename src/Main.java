@@ -17,7 +17,6 @@ public class Main {
         myDoctor.addAvaibleAppointment(new Date(), "7:00am");
         myDoctor.addAvaibleAppointment(new Date(), "8:00am");
         myDoctor.addAvaibleAppointment(new Date(), "7:15am");
-
         //Muestra la dirección de memoria
         System.out.println("\nLista de citas para el doctor "+myDoctor.getName()+
                            ": \n" + myDoctor.getAvaibleAppointments());
@@ -47,7 +46,7 @@ public class Main {
         //Memoria de objetos
         Patient myPatient = new Patient("Ramiro","Ramiro@mail.com");
         Patient myPatient2 = new Patient("Andres","Andres@mail.com");
-
+        myPatient.
         System.out.println(myPatient.getName());
         System.out.println(myPatient2.getName());
         // Igualando la direccion de memoria
