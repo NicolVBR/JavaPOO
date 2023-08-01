@@ -9,11 +9,14 @@ public class Main {
     public static void main(String[] args) {
 
        //Doctor myDoctor = new Doctor();
-        Doctor myDoctor = new Doctor("Nicol Barajas","Cirujana");
-        System.out.println("\nID: " + myDoctor.getId()+
+        Doctor myDoctor = new Doctor("Nicol Barajas","nicol@gmail.com");
+        myDoctor.setSpeciallity("Cirujana");
+        myDoctor.setAddress("Cra. 5 # 6 B");
+        myDoctor.setPhoneNumber("11111568");
+       /* System.out.println("\nID: " + myDoctor.getId()+
                 "\nName: " + myDoctor.getName() +
                 "\nEspecialidad: " + myDoctor.getSpeciallity());
-
+*/
         myDoctor.addAvaibleAppointment(new Date(), "7:00am");
         myDoctor.addAvaibleAppointment(new Date(), "8:00am");
         myDoctor.addAvaibleAppointment(new Date(), "7:15am");
@@ -24,6 +27,8 @@ public class Main {
         for (Doctor.AvaibleAppointment availableAppointment:myDoctor.getAvaibleAppointments()) {
             System.out.println(availableAppointment.getDate() + "\t" + availableAppointment.getTime());
         }
+
+        System.out.println(myDoctor);
 
 
 

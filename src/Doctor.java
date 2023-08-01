@@ -85,5 +85,10 @@ public class Doctor extends User{
         }
     }
 
-
+    @Override
+    public String toString() {
+        return "Doctor: \n" +
+                super.toString() +
+                "Speciallity: " + speciallity ;
+    }
 }
