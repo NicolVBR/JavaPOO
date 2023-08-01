@@ -83,12 +83,19 @@ public class Doctor extends User{
         public void setIdAvilabelApointment(int idAvilabelApointment) {
             this.idAvilabelApointment = idAvilabelApointment;
         }
+
+        @Override
+        public String toString() {
+            return "\nAvaibleAppointment:" +
+                    "\nTime: " + time +
+                    "\tDate: " + date;
+        }
     }
 
     @Override
     public String toString() {
         return "Doctor: \n" +
                 super.toString() +
-                "Speciallity: " + speciallity ;
+                "Speciallity: " + speciallity + "\n" + avaibleAppointments.toString();
     }
 }

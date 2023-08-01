@@ -16,17 +16,20 @@ public class Main {
        /* System.out.println("\nID: " + myDoctor.getId()+
                 "\nName: " + myDoctor.getName() +
                 "\nEspecialidad: " + myDoctor.getSpeciallity());
-*/
+
         myDoctor.addAvaibleAppointment(new Date(), "7:00am");
         myDoctor.addAvaibleAppointment(new Date(), "8:00am");
         myDoctor.addAvaibleAppointment(new Date(), "7:15am");
         //Muestra la dirección de memoria
         System.out.println("\nLista de citas para el doctor "+myDoctor.getName()+
                            ": \n" + myDoctor.getAvaibleAppointments());
+
+
         //Para imprimir los valor de la dirrecion de memoria
         for (Doctor.AvaibleAppointment availableAppointment:myDoctor.getAvaibleAppointments()) {
             System.out.println(availableAppointment.getDate() + "\t" + availableAppointment.getTime());
         }
+        */
 
         System.out.println(myDoctor);
 
