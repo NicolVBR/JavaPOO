@@ -1,9 +1,5 @@
-import com.sun.xml.internal.bind.v2.model.core.ID;
-
-import javax.print.Doc;
-import java.util.Date;
-import java.util.Scanner;
-import static Menu.UMmenu.showMenu;
+import model.*;
+import static model.Doctor.*;
 
 public class Main {
     public static void main(String[] args) {
