@@ -13,11 +13,11 @@ public class Doctor extends User {
 
 
   //Comportamientos
-    public Doctor(){
+    /*public Doctor(){
         super();
         //System.out.println("Construcción del objeto doctor");
         //id ++;
-    }
+    }*/
     public Doctor(String name, String email){
         super(name,email);
         //System.out.println("El nombre del doctor asignado es: " + name);
@@ -99,5 +99,12 @@ public class Doctor extends User {
         return "Doctor: \n" +
                 super.toString() +
                 "Speciallity: " + speciallity + "\n" + avaibleAppointments.toString();
+    }
+
+    @Override
+    public void showDataUser() {
+        System.out.println("Hospital: Gran colombiano");
+        System.out.println("Tipo: Empleado");
+        System.out.println("Departamento : Urgencias");
     }
 }

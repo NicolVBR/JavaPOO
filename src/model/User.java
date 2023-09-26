@@ -1,15 +1,15 @@
 package model;
 
-public class User {
+public abstract class User {
     private int id;
     private String name;
     private String email;
     private String address;
     private String phoneNumber;
 
-    public User() {
+   /* public User() {
 
-    }
+    }*/
 
     public User(String name, String email) {
         this.name = name;
@@ -53,10 +53,10 @@ public class User {
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        if(phoneNumber.length() == 8){
+        if (phoneNumber.length() == 8) {
             this.phoneNumber = phoneNumber;
 
-        }else{
+        } else {
             System.out.println("ERROR: El nÚmero telefonico debe ser de 8 digitos.");
         }
     }
@@ -68,4 +68,6 @@ public class User {
                 "Email: " + email + '\n' +
                 "Address: " + address + ". PhoneNumber: " + phoneNumber + '\n';
     }
+
+    public abstract void showDataUser();
 }

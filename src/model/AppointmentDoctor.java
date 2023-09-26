@@ -1,8 +1,9 @@
 package model;
 
 import java.util.Date;
+import java.util.List;
 
-public class AppointmentDoctor implements ISchedulabel{
+public class AppointmentDoctor implements ISchedulabel {
     private int id;
     private Patient patient;
     private Doctor doctor;

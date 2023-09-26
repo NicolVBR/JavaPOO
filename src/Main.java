@@ -1,9 +1,38 @@
 import model.*;
+
+import javax.jws.soap.SOAPBinding;
+
 import static model.Doctor.*;
 
 public class Main {
     public static void main(String[] args) {
+       // User user = new User(); //NO SE INSTANCIAN LAS CLASES ABSTRACTAS
 
+        /*User user = new User() {
+            @Override
+            public int getId() {
+                return super.getId(); // SE LE DA UN COMPORTAMIENTO POR MEDIO DE UN METODO.
+            }
+        };*/
+        //ABSTRACCIÓN DE CLASES
+        User userDoc = new Doctor("Nicol", "Nicol@gmail.com");//si se puede crear
+        userDoc.showDataUser();
+        User userPat = new Patient("Sara", "Sari@gmail.com");//si se puede crear
+        userPat.showDataUser();
+        User userNurse = new Nurse("Andres", "Andre@gmail.com");//si se puede crear
+        userNurse.showDataUser();
+
+        //ABSTRACCION DE UN MÉTODO MEDIANTE CLASES ANONIMAS
+        User userMetAnon = new User("Julian","Juli@gmail.com") {
+            @Override
+            public void showDataUser() {
+                System.out.println("MÉTODO MEDIANTE CLASE ANONIMA");
+                System.out.println("Doctor");
+                System.out.println(" Hospital Costa Azul");
+                System.out.println("Departamento: Pediatria");
+            }
+        };
+        userMetAnon.showDataUser();
        //Doctor myDoctor = new Doctor();
         Doctor myDoctor = new Doctor("Nicol Barajas","nicol@gmail.com");
         myDoctor.setSpeciallity("Cirujana");
@@ -62,7 +91,7 @@ public class Main {
         myPatient2.setName("Saray");
     }
     public void settersGetters(){
-        Patient myPatient = new Patient();
+        Patient myPatient = new Patient("tereza","tere@gmail.com");
         System.out.println("\n" + myPatient.getName());
        // System.out.println(myPatient2.getName());
         //System.out.println( "\nName: " + myPatient2.getName() + "\nEmail: " + myPatient2.getEmail());

@@ -4,9 +4,6 @@ public class Patient extends User {
     private String birthday, blood;
     private double weight, height;
 
-    public Patient(){
-        super();
-    }
     public Patient(String name, String email) {
         super(name,email);
     }
@@ -52,5 +49,12 @@ public class Patient extends User {
                 "\nBlood='" + blood +
                 "\nWeight=" + getWeight() +
                 "\nHeight=" + getHeight() ;
+    }
+
+    @Override
+    public void showDataUser() {
+        System.out.println("Tipo de paciente: Beneficiario");
+        System.out.println("Hsitorial medico");
+        System.out.println("Enfern¿medades : Ninguna");
     }
 }

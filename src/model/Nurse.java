@@ -21,4 +21,11 @@ public class Nurse extends User{
                 "speciallity='" + speciallity + '\'' +
                 '}';
     }
+
+    @Override
+    public void showDataUser() {
+        System.out.println("Hospital Gran Colombia sur");
+        System.out.println("Tipo: Empleado");
+        System.out.println("Departamento: Maternidad, Hipertensin, Urgencias");
+    }
 }
